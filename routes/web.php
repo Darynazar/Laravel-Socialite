@@ -24,3 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //socialite
 Route::get('login/{provider}', [\App\Http\Controllers\Auth\LoginController::class, 'redirectToProvider']);
 Route::get('{provider}/callback', [\App\Http\Controllers\Auth\LoginController::class, 'handleProviderCallback']);
+//repository
+Route::get('repository', [\App\Http\Controllers\GitConroller::class, 'allRepositories'])->middleware('auth');
+
+Route::post('user-token', [\App\Http\Controllers\UserTokenController::class, 'store'])->name('UserTokenStore');
