@@ -28,3 +28,5 @@ Route::get('{provider}/callback', [\App\Http\Controllers\Auth\LoginController::c
 Route::get('repository', [\App\Http\Controllers\GitConroller::class, 'allRepositories'])->middleware('auth');
 
 Route::post('user-token', [\App\Http\Controllers\UserTokenController::class, 'store'])->name('UserTokenStore');
+
+Route::get('user-token-show', [\App\Http\Controllers\UserTokenController::class, 'show'])->name('UserTokenShow');
