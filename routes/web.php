@@ -20,3 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//socialite
+Route::get('login/{provider}', [\App\Http\Controllers\Auth\LoginController::class, 'redirectToProvider']);
+Route::get('{provider}/callback', [\App\Http\Controllers\Auth\LoginController::class, 'handleProviderCallback']);

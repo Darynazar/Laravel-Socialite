@@ -64,6 +64,13 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group row mb-0 mt-3">
+                            <div class="col-md-8 offset-md-4">
+                                <a href="{{ url('/login/github') }}" class="btn btn-warning">
+                                    {{ __('Login with Github') }}
+                                </a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
