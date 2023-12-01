@@ -51,7 +51,6 @@ class LoginController extends Controller
         return Socialite::driver($provider)->redirect();
     }
 
-
     /**
      * Obtain the user information from provider.
      *
