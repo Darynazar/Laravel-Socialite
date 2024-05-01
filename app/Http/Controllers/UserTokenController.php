@@ -21,7 +21,6 @@ class UserTokenController extends Controller
 
         return redirect()->route('UserTokenShow');
     }
-
     public function show()
     {
         $githubToken = UserToken::where('user_id', auth()->user()->id)->first();
