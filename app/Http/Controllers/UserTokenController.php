@@ -29,5 +29,4 @@ class UserTokenController extends Controller
         $repositories = json_decode(json_encode($repositories), FALSE);
         return view('github.show', compact('repositories'));
     }
-
 }
